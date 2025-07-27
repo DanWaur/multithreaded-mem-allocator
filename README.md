@@ -3,7 +3,7 @@ This program implements a multithreaded memory allocator that handles small and 
 
 # Directions
 - create a file driver.c (a sample file was provided) and call the functions to handle the malloc functions defined in myMalloc.h
-- in driver.c, myInit(numThreads, flag) must be called before any calls to myMalloc() or myFree(). numThreads is the number of threads to run the program, and flag is an int representing what mode to use to handle concurrency. A flag of 0 is sequential, 1 is used for coarse-grain, and 2 is used for fine-grain.
+- in driver.c, myInit(numThreads, flag) must be called before any calls to myMalloc() or myFree(). numThreads is the number of threads to run the program, and flag is an int representing what mode to use to handle concurrency. A flag of 0 is sequential, 1 is used for coarse-grain, and 2 is used for fine-grain. A malloc request should never exceed 1024.
 - cd into the project directory in bash and run 'make' to create the 'driver' executable.
 - run 'driver' to execute the commands defined in driver.c.
 
