@@ -1,0 +1,4 @@
+# Multithreaded Memory Allocator
+This program implements a multithreaded memory allocator that handles small and large blocks. It is thread safe, and utilizes 3 different modes to choose when dealing with concurrency: sequential, coarse-grain, and fine-grain. I was given starter code that only handled small blocks sequentially. I was assigned to expand this to handle small and larger blocks, as well as utilize coarse-grain and fine-grain concurrency. Coarse grain concurrency implements a lock whenever more than one thread attempts to free or malloc data at the same time. Fine-grain concurrency is implemented by giving each thread its own list of memory. When a thread's memory runs out, it overflows into a separate 'Overflow' list. Thus, when freeing data in this mode, it is crucial to determine where the original memory block lies by looking at the memory address.
+
+#
